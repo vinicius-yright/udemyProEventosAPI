@@ -61,10 +61,20 @@ namespace ProEventos.API.Controllers
            return _evento.Where(evento => evento.Id == id);
         }
 
-        [HttpPost("{id}")]
-        public string Post(int id)
+        [HttpPost]
+        public Evento Post(Evento novoEvento)
         {
-            return $"Valor recebido via post: {id}";
+            Evento eventoAlterado = new Evento() {
+                Id = novoEvento.Id,
+                Local = novoEvento.Local,
+                Data = novoEvento.Data,
+                Nome = novoEvento.Nome,
+                QtdPessoas = novoEvento.QtdPessoas,
+                Lote = novoEvento.Lote,
+                ImagemURL = novoEvento.ImagemURL
+             };
+
+            return novoEvento;
         }
 
         [HttpDelete("{id}")]
