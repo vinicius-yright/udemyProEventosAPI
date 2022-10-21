@@ -38,7 +38,7 @@ namespace ProEventos.API.Controllers
                 Data = DateTime.Now.AddDays(21).ToString("dd/MM/yyyy"),
                 Nome = "CTN Apresenta: Tradições Chinesas",
                 QtdPessoas = 200,
-                Lote = "Lote único",
+                Lote = "Terceiro lote",
                 ImagemURL = "foto_baiao_cachorro.png"
              }
         };
